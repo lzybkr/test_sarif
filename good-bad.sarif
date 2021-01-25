@@ -1,0 +1,153 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Fuzzer"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "FZ2001",
+          "message": {
+            "text": "Fuzzed input file caused crash"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "good-bad.cpp"
+                },
+                "region": {
+                  "startLine": 93
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "message": {
+                "text": "Tracing the path from user input to insecure usage."
+              },
+              "threadFlows": [
+                {
+                  "message": {
+                    "text": "This is a sample threadFlow message."
+                  },
+                  "locations": [
+                    {
+                      "location": {
+                        "message": {
+                          "text": "Byte offset 0 from file input has value 0x62"
+                        },
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "good-bad.cpp"
+                          },
+                          "region": {
+                            "startLine": 80
+                          }
+                        }
+                      },
+                      "state": {
+                        "expr": {
+                          "text": "undef"
+                        }
+                      },
+                      "nestingLevel": 0
+                    },
+                    {
+                      "location": {
+                        "message": {
+                          "text": "Byte offset 1 from file input has value 0x61"
+                        },
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "good-bad.cpp"
+                          },
+                          "region": {
+                            "startLine": 83
+                          }
+                        }
+                      },
+                      "state": {
+                        "expr": {
+                          "text": "422222"
+                        }
+                      },
+                      "nestingLevel": 0
+                    },
+                    {
+                      "location": {
+                        "message": {
+                          "text": "Byte offset 2 from file input has value 0x64"
+                        },
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "good-bad.cpp"
+                          },
+                          "region": {
+                            "startLine": 86
+                          }
+                        }
+                      },
+                      "state": {
+                        "expr": {
+                          "text": "422222"
+                        }
+                      },
+                      "nestingLevel": 0
+                    },
+                    {
+                      "location": {
+                        "message": {
+                          "text": "Byte offset 3 from file input has value 0x21"
+                        },
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "good-bad.cpp"
+                          },
+                          "region": {
+                            "startLine": 89
+                          }
+                        }
+                      },
+                      "state": {
+                        "expr": {
+                          "text": "422222"
+                        }
+                      },
+                      "nestingLevel": 0
+                    },
+                    {
+                      "location": {
+                        "message": {
+                          "text": "Crash"
+                        },
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "good-bad.cpp"
+                          },
+                          "region": {
+                            "startLine": 93
+                          }
+                        }
+                      },
+                      "state": {
+                        "raw_input": {
+                          "text": "423333"
+                        }
+                      },
+                      "nestingLevel": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
